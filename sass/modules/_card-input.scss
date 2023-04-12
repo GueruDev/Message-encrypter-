@@ -4,6 +4,9 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: .5rem;
+    &.another-class{
+        display: grid;
+    }
     textarea {
         appearance: none;
         border: none;
@@ -14,7 +17,7 @@
         font-size: inherit;
         color: inherit;
         width: 100%;
-
+        &:nth-of-type()
         &::placeholder{
             color: $alura-color;
             font-size: 2rem;
@@ -27,9 +30,8 @@
         width: 100%;
 
         color: $primary-color;
-        font-size: 2rem;
+        font-size: 1rem;
         font-weight:400;
         background-color: $white;
     }
-
 }

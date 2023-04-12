@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+* html {
+  font-size: 62.5%;
+}
+* html body {
+  background-color: #F3F5FC;
+  font-size: 1.6rem;
+}
+* .pd {
+  padding: 0.5rem 5%;
+}
+* .none {
+  display: none;
+}
+
+header {
+  background-color: #19BDE6;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+header img {
+  height: 1.5rem;
+  width: 4rem;
+}
+header span {
+  font-size: 1.2rem;
+  color: #0A3871;
+}
+
+@media screen and (min-width: 1024px) {
+  .encrypter {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 0.5rem;
+  }
+}
+.card-input {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+.card-input textarea {
+  appearance: none;
+  border: none;
+  resize: none;
+  outline: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  width: 100%;
+}
+.card-input textarea::placeholder {
+  color: #0A3871;
+  font-size: 2rem;
+}
+.card-input button {
+  border-radius: 0.5rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  width: 100%;
+  color: #4D8E9E;
+  font-size: 2rem;
+  font-weight: 400;
+  background-color: #fff;
+}
+
+.card-output {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 0.4rem;
+  margin: 4rem 0;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.0784313725);
+}
+.card-output img {
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .card-output img {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

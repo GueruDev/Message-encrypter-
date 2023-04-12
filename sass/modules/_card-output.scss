@@ -1,0 +1,23 @@
+@import 'variables';
+
+.card-output{
+
+    background-color: $white;
+    border-radius: .5rem;
+    text-align: center;
+
+    padding: .4rem;
+    margin: 4rem 0;
+    box-shadow: 0px 24px 32px -8px #00000014;
+    img{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+.card-output{
+    img{
+        display:block;
+    }
+}
+}

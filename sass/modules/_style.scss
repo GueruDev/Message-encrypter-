@@ -1,0 +1,26 @@
+@import 'variables';
+// GENERAL STYLES
+
+*{
+    // RESET STYLES
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    
+    font-family: $primary-font;
+    html{
+        font-size: 62.5%;
+        body{
+            background-color: #F3F5FC;
+            font-size: 1.6rem; // 1rem = 10px
+        }    
+    }
+    .pd{
+        padding: .5rem 5%;
+    }
+    .none{
+        display: none;
+    }
+}

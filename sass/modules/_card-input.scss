@@ -1,0 +1,35 @@
+@import 'variables';
+
+.card-input{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .5rem;
+    textarea {
+        appearance: none;
+        border: none;
+        resize: none;
+        outline: none;
+        background-color: transparent;
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        width: 100%;
+
+        &::placeholder{
+            color: $alura-color;
+            font-size: 2rem;
+        }
+    }
+    button{
+        border-radius: .5rem;
+        padding: 0 2rem;
+        margin: 0 auto;
+        width: 100%;
+
+        color: $primary-color;
+        font-size: 2rem;
+        font-weight:400;
+        background-color: $white;
+    }
+
+}

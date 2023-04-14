@@ -27,11 +27,11 @@ function decrypted (value: string, dict: Record <string, string>) :string {
 
 // Buttons (Encrypted & Decrypted)
 
-const encryptBtn = document.querySelector('button#encrypt') as HTMLButtonElement;
-const decryptBtn = document.querySelector('button#decrypt') as HTMLButtonElement;
+const encryptBtn = <HTMLButtonElement>document.querySelector('button#encrypt');
+const decryptBtn = <HTMLButtonElement>document.querySelector('button#decrypt');
 const copyBtn = document.querySelector('button#copy') as HTMLButtonElement;
 
-// Textareas
+// Text areas
 
 const textInput = document.querySelector('textarea#inputText') as HTMLTextAreaElement;
 const textOutput = document.querySelector('textarea#outputText') as HTMLTextAreaElement;
@@ -64,7 +64,7 @@ encryptBtn.onclick = () => insertTextOutput(textInput.value ,encrypted, getDicti
 decryptBtn.onclick = () => insertTextOutput(textInput.value ,decrypted, getDictionary())
 copyBtn.onclick = async () => {
     try {
-        navigator.clipboard.writeText(textOutput.value)
+        await navigator.clipboard.writeText(textOutput.value)
     }
     catch (err) {
         console.error(err)

@@ -4,6 +4,7 @@ const buttonPopUp = document.getElementById("buttonDictionary");
 const popUp = document.getElementById("popUpDictionary");
 const popUpContent = document.getElementById("popUpContent");
 const popUpSave = document.getElementById("popUpSave");
+const popUpClose = document.getElementById("popUpClose");
 const table = document.getElementById("dictionaryTable");
 const populatePopUp = async () => {
     let htmlContent = "";
@@ -31,3 +32,4 @@ const popUpUpdateDictionary = async () => {
 };
 buttonPopUp.addEventListener("click", showPopUp, { passive: true });
 popUpSave.addEventListener("click", popUpUpdateDictionary, { passive: true });
+popUpClose.addEventListener("click", () => popUp.close(), { passive: true });

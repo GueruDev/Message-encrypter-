@@ -1,7 +1,7 @@
 export const words = {
     'title': {
-        'es': 'Encriptador Alura Challenge',
-        'en': 'Alura Challenge Scrambler',
+        'es': 'Encriptador Alura',
+        'en': 'Alura Scrambler',
         'data': 'title',
         'type': 'inner'
     },
@@ -60,8 +60,8 @@ export const words = {
         'type': 'inner'
     },
     'outputPlaceholder': {
-        'es': '',
-        'en': '',
+        'es': 'Ningún mensaje fue encontrado',
+        'en': 'Message not found',
         'data': 'output-textarea',
         'type': 'placeholder'
     },
@@ -87,6 +87,12 @@ export const words = {
         'es': 'Modo Claro',
         'en': 'Light Mode',
         'data': 'light-input',
+        'type': 'inner'
+    },
+    'dict-head': {
+        'es': 'Diccionario actual:',
+        'en': 'Actual dictionary:',
+        'data': 'dict-head',
         'type': 'inner'
     }
 };

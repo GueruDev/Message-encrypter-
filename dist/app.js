@@ -21,7 +21,7 @@ function decrypted(value, dict) {
 const encryptBtn = document.querySelector('button#encrypt');
 const decryptBtn = document.querySelector('button#decrypt');
 const copyBtn = document.querySelector('button#copy');
-// Textareas
+// Text areas
 const textInput = document.querySelector('textarea#inputText');
 const textOutput = document.querySelector('textarea#outputText');
 // Other Items
@@ -43,7 +43,7 @@ encryptBtn.onclick = () => insertTextOutput(textInput.value, encrypted, getDicti
 decryptBtn.onclick = () => insertTextOutput(textInput.value, decrypted, getDictionary());
 copyBtn.onclick = async () => {
     try {
-        navigator.clipboard.writeText(textOutput.value);
+        await navigator.clipboard.writeText(textOutput.value);
     }
     catch (err) {
         console.error(err);

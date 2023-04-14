@@ -12,23 +12,21 @@
   font-family: $primary-font;
   html {
     font-size: 62.5%;
-    body {
-      position: relative;
-      background-color: #f3f5fc;
-      font-size: 0.1rem; // 1rem = 10px
-
-      // Remove
-
-      margin-bottom: 10rem;
-    }
   }
-  // .dark{
-          
-  // }
+  body{
+    background-color: var(--primary-color);
+    color: var(--black);
+    transition: all 2s ease;
+  }
+
   .button {
     padding: 0.2rem 1.5rem;
     border-radius: 0.9rem;
     font-size: 1.1rem;
+
+    background-color: var(--white);
+    color: var(--black);
+    border: 2px solid var(--black);
   }
   .pd {
     padding: 0.5rem 5%;
@@ -45,10 +43,12 @@
       position: absolute;
 
       width: 50px;
-      height: 30px; // 25
+      height: 26px; // 25
 
-      background-color: #333;
+      background-color: var(--toggles);
       border-radius: 25px;
+
+      transition: all .5s ease;
     }
     &::after {
       content: "";

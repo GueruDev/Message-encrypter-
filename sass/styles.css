@@ -1,9 +1,30 @@
 :root {
   --primary-color: white;
+  --secondary-color: #19BDE6;
+  --white:#fff;
+  --black:#000;
+  --alura-color:#0A3871;
+  --button-color:#4D8E9E;
+  --accessibility-color:black;
+  --header-color:white;
+  --header-image:unset;
+  --header-text:#0A3871;
+  --toggles:#333;
 }
 
 [data-theme=dark] {
   --primary-color: black;
+  --secondary-color: #213135;
+  --white:black;
+  --black:white;
+  --alura-color:#1980ff;
+  --button-color:#177fff;
+  --accessibility-color:rgb(43, 43, 43);
+  --header-color:rgb(43, 43, 43);
+  --header-img:saturate(100);
+  --header-text:#19BDE6;
+  --toggles:black;
+  transition: all 0.5s ease;
 }
 
 * {
@@ -15,16 +36,18 @@
 * html {
   font-size: 62.5%;
 }
-* html body {
-  position: relative;
-  background-color: #f3f5fc;
-  font-size: 0.1rem;
-  margin-bottom: 10rem;
+* body {
+  background-color: var(--primary-color);
+  color: var(--black);
+  transition: all 2s ease;
 }
 * .button {
   padding: 0.2rem 1.5rem;
   border-radius: 0.9rem;
   font-size: 1.1rem;
+  background-color: var(--white);
+  color: var(--black);
+  border: 2px solid var(--black);
 }
 * .pd {
   padding: 0.5rem 5%;
@@ -41,9 +64,10 @@
   content: "";
   position: absolute;
   width: 50px;
-  height: 30px;
-  background-color: #333;
+  height: 26px;
+  background-color: var(--toggles);
   border-radius: 25px;
+  transition: all 0.5s ease;
 }
 * .check::after {
   content: "";
@@ -76,16 +100,38 @@
 }
 :root {
   --primary-color: white;
+  --secondary-color: #19BDE6;
+  --white:#fff;
+  --black:#000;
+  --alura-color:#0A3871;
+  --button-color:#4D8E9E;
+  --accessibility-color:black;
+  --header-color:white;
+  --header-image:unset;
+  --header-text:#0A3871;
+  --toggles:#333;
 }
 
 [data-theme=dark] {
   --primary-color: black;
+  --secondary-color: #213135;
+  --white:black;
+  --black:white;
+  --alura-color:#1980ff;
+  --button-color:#177fff;
+  --accessibility-color:rgb(43, 43, 43);
+  --header-color:rgb(43, 43, 43);
+  --header-img:saturate(100);
+  --header-text:#19BDE6;
+  --toggles:black;
+  transition: all 0.5s ease;
 }
 
 header {
+  transition: all 2s ease;
   font-size: 1rem;
-  background-color: #19BDE6;
-  color: #fff;
+  background-color: var(--header-color);
+  color: var(--header-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,6 +139,7 @@ header {
 header img {
   height: 1.9rem;
   width: 1.5rem;
+  filter: var(--header-img);
 }
 header .logo {
   display: flex;
@@ -101,29 +148,38 @@ header .logo {
 header .logo span {
   display: none;
   font-size: 1.2rem;
-  color: #0A3871;
+  color: var(--header-text);
 }
 header .accessibility {
   display: flex;
   gap: 4rem;
 }
+header .accessibility button:hover {
+  color: var(--white);
+  background-color: var(--black);
+  transition: all 0.5s ease;
+}
 header .accessibility .darkmode {
-  display: flex;
-  gap: 0.5rem;
+  display: grid;
+  justify-items: start;
+  align-items: center;
+  grid: "A B C"/1fr 1fr 1fr;
+  transform: translateX(-50%);
   position: fixed;
   left: 50%;
-  transform: translateX(-50%);
-  bottom: 1%;
-  width: 340px;
+  bottom: 6%;
+  width: 230px;
 }
 header .accessibility .translate {
-  display: flex;
-  gap: 0.5rem;
-  position: fixed;
-  left: 50%;
+  display: grid;
+  justify-items: start;
+  align-items: center;
+  grid: "A B C"/1fr 1fr 1fr;
   transform: translateX(-50%);
-  bottom: 7%;
-  width: 200px;
+  left: 50%;
+  position: fixed;
+  bottom: 2%;
+  width: 230px;
 }
 header .accessibility .darkmode, header .accessibility .translate {
   z-index: 20;
@@ -138,7 +194,8 @@ header .accessibility .bg {
   bottom: 0%;
   width: 100vw;
   height: 12vh;
-  background-color: #000;
+  background-color: var(--accessibility-color);
+  transition: all 0.5s ease;
   z-index: 10;
 }
 
@@ -156,10 +213,31 @@ header .accessibility .bg {
 }
 :root {
   --primary-color: white;
+  --secondary-color: #19BDE6;
+  --white:#fff;
+  --black:#000;
+  --alura-color:#0A3871;
+  --button-color:#4D8E9E;
+  --accessibility-color:black;
+  --header-color:white;
+  --header-image:unset;
+  --header-text:#0A3871;
+  --toggles:#333;
 }
 
 [data-theme=dark] {
   --primary-color: black;
+  --secondary-color: #213135;
+  --white:black;
+  --black:white;
+  --alura-color:#1980ff;
+  --button-color:#177fff;
+  --accessibility-color:rgb(43, 43, 43);
+  --header-color:rgb(43, 43, 43);
+  --header-img:saturate(100);
+  --header-text:#19BDE6;
+  --toggles:black;
+  transition: all 0.5s ease;
 }
 
 .card-input {
@@ -180,10 +258,13 @@ header .accessibility .bg {
   font-size: inherit;
   color: inherit;
   overflow: scroll;
+  overflow-x: auto; /* Habilita el scroll horizontal */
+  overflow-y: auto; /* Habilita el scroll vertical */
   width: 100%;
 }
 .card-input textarea::placeholder {
-  color: #0A3871;
+  color: var(--alura-color);
+  transition: all 1s ease;
   font-size: 2rem;
 }
 .card-input table {
@@ -206,10 +287,15 @@ header .accessibility .bg {
   padding: 0 2rem;
   margin: 0 auto;
   width: 100%;
-  color: #4D8E9E;
+  color: var(--button-color);
   font-size: 2rem;
   font-weight: 400;
-  background-color: #fff;
+  background-color: var(--white);
+}
+.card-input .encrypter-buttons button:hover {
+  color: var(--white);
+  background-color: var(--black);
+  transition: all 0.5s ease;
 }
 
 @media screen and (min-width: 768px) {
@@ -219,17 +305,40 @@ header .accessibility .bg {
 }
 :root {
   --primary-color: white;
+  --secondary-color: #19BDE6;
+  --white:#fff;
+  --black:#000;
+  --alura-color:#0A3871;
+  --button-color:#4D8E9E;
+  --accessibility-color:black;
+  --header-color:white;
+  --header-image:unset;
+  --header-text:#0A3871;
+  --toggles:#333;
 }
 
 [data-theme=dark] {
   --primary-color: black;
+  --secondary-color: #213135;
+  --white:black;
+  --black:white;
+  --alura-color:#1980ff;
+  --button-color:#177fff;
+  --accessibility-color:rgb(43, 43, 43);
+  --header-color:rgb(43, 43, 43);
+  --header-img:saturate(100);
+  --header-text:#19BDE6;
+  --toggles:black;
+  transition: all 0.5s ease;
 }
 
 .card-output {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  background-color: #fff;
+  border: 2px solid var(--black);
+  background-color: var(--white);
+  transition: all 0.5s ease;
   border-radius: 0.5rem;
   text-align: center;
   padding: 0.4rem;
@@ -238,6 +347,10 @@ header .accessibility .bg {
 }
 .card-output img {
   width: 100%;
+}
+.card-output textarea {
+  background-color: var(--white);
+  color: var(--black);
 }
 
 @media screen and (min-width: 1024px) {
@@ -252,6 +365,8 @@ header .accessibility .bg {
   margin: auto;
   padding: 2rem;
   border-radius: 0.8rem;
+  background-color: var(--white);
+  color: var(--black);
 }
 #popUpDictionary .popUpText {
   display: flex;
@@ -259,7 +374,10 @@ header .accessibility .bg {
   gap: 0.2rem;
 }
 #popUpDictionary .popUpText img {
-  height: 1.4rem;
+  height: 1.5rem;
+}
+#popUpDictionary #popUpContent {
+  margin-bottom: 2rem;
 }
 #popUpDictionary #popUpContent ul {
   list-style: none;
@@ -269,6 +387,24 @@ header .accessibility .bg {
 }
 #popUpDictionary #popUpContent ul li input {
   width: 100%;
+  background-color: var(--white);
+  color: var(--black);
+}
+#popUpDictionary .popUpButtons {
+  display: flex;
+  justify-content: space-between;
+}
+#popUpDictionary .popUpButtons button {
+  background-color: var(--white);
+  color: var(--black);
+  border: 2px solid var(--black);
+  padding: 0.2rem 1rem;
+  border-radius: 0.7rem;
+}
+#popUpDictionary .popUpButtons button:hover {
+  background-color: var(--black);
+  color: var(--white);
+  transition: all 0.5s ease;
 }
 
 /*# sourceMappingURL=styles.css.map */

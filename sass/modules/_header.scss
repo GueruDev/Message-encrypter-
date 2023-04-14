@@ -3,10 +3,12 @@ header{
     img{
         height: 1.9rem;
         width: 1.5rem;
+        filter: var(--header-img);
     }
+    transition: all 2s ease;
     font-size: 1rem;
-    background-color: $secondary-color;
-    color:$white ;
+    background-color: var(--header-color);
+    color:var(--header-color);
 
     display: flex;
     justify-content: space-between;
@@ -17,33 +19,41 @@ header{
         span{
             display: none;
             font-size: 1.2rem;
-            color: $alura-color;
+            color: var(--header-text);
         }
     }
     .accessibility{
         display: flex;
         gap: 4rem;
+        button{
+            &:hover{
+                color: var(--white);
+                background-color: var(--black);
+                transition: all .5s ease;
+            }
+        }
         .darkmode{
-
-            display: flex;
-            gap: .5rem;
-
+            display: grid;
+            justify-items: start;
+            align-items: center;
+            grid: "A B C"/1fr 1fr 1fr;
+            transform: translateX(-50%);
             position: fixed;
             left: 50%;
-            transform: translateX(-50%);
-            bottom: 1%;
-            width: 340px;
+            bottom: 6%;
+            width: 230px;
 
         }
         .translate{
-            display: flex;
-            gap: .5rem;
-
-            position: fixed;
-            left: 50%;
+            display: grid;
+            justify-items: start;
+            align-items: center;
+            grid: "A B C"/1fr 1fr 1fr;
             transform: translateX(-50%);
-            bottom: 7%;
-            width: 200px;
+            left: 50%;
+            position: fixed;
+            bottom: 2%;
+            width: 230px;
         }
         .darkmode,.translate{
             z-index: 20;
@@ -58,7 +68,8 @@ header{
             bottom: 0%;
             width: 100vw;
             height: 12vh;
-            background-color: $black;
+            background-color: var(--accessibility-color);
+            transition: all .5s ease;
             z-index: 10;
         }
     }

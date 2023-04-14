@@ -2,12 +2,14 @@
     margin: auto;
     padding: 2rem;
     border-radius: .8rem;
+    background-color: var(--white);
+    color: var(--black);
     .popUpText{
         display: flex;
         justify-content: center;
         gap: .2rem;
         img{
-            height: 1.4rem;
+            height: 1.5rem;
         }
     }
     #popUpContent{
@@ -17,7 +19,26 @@
                 display: flex;
                 input{
                     width: 100%;
+                    background-color: var(--white);
+                    color: var(--black);
                 }
+            }
+        }
+        margin-bottom: 2rem;
+    }
+    .popUpButtons{
+        display: flex;
+        justify-content: space-between;
+        button{
+            background-color: var(--white);
+            color:var(--black);
+            border: 2px solid var(--black);
+            padding: .2rem 1rem;
+            border-radius: .7rem;
+            &:hover{
+                background-color: var(--black);
+                color: var(--white);
+                transition: all .5s ease;
             }
         }
     }

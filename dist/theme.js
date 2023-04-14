@@ -4,9 +4,9 @@ const themeBtn = document.querySelector('input#DLChecking');
 const body = document.querySelector('body');
 function reloadTheme(themeSelect) {
     if (themeSelect === theme.dark)
-        body.classList.add('dark');
+        body.setAttribute('data-theme', 'ligth');
     else
-        body.classList.remove('dark');
+        body.setAttribute('data-theme', 'dark');
 }
 function changeTheme(value) {
     const themeSelect = value ? theme.light : theme.dark;

@@ -1,5 +1,5 @@
 $primary-color:#4D8E9E;
-
+$secondary-color:#19BDE6;
 $terteary-color: #75E3FF;
 $alura-color:#0A3871;
 
@@ -15,9 +15,29 @@ $primary-color-dark:#4D8E9E;
 :root {
     --primary-color: white;
     --secondary-color: #19BDE6;
+    --white:#fff;
+    --black:#000;
+    --alura-color:#0A3871;
+
+    --button-color:#4D8E9E;
+    --accessibility-color:black;
+    --header-color:white;
+    --header-image:unset;
+    --header-text:#0A3871;
+    --toggles:#333;
 }
 
 [data-theme="dark"] {
     --primary-color: black;
     --secondary-color: #213135;
+    --white:black;
+    --black:white;
+    --alura-color:#1980ff;
+    --button-color:#177fff;
+    --accessibility-color:rgb(43, 43, 43);
+    --header-color:rgb(43, 43, 43);
+    --header-img:saturate(100);
+    --header-text:#19BDE6;
+    --toggles:black;
+    transition: all .5s ease;
 }

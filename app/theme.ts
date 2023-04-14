@@ -6,8 +6,8 @@ const themeBtn = document.querySelector('input#DLChecking') as HTMLInputElement
 const body = document.querySelector('body') as HTMLBodyElement
 
 function reloadTheme(themeSelect: theme){
-    if(themeSelect === theme.dark) body.classList.add('dark')
-    else body.classList.remove('dark')
+    if(themeSelect === theme.dark) body.setAttribute('data-theme', 'ligth')
+    else body.setAttribute('data-theme', 'dark')
 }
 
 function changeTheme(value: boolean) {

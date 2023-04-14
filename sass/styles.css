@@ -1,3 +1,11 @@
+:root {
+  --primary-color: white;
+}
+
+[data-theme=dark] {
+  --primary-color: black;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -8,8 +16,15 @@
   font-size: 62.5%;
 }
 * html body {
-  background-color: #F3F5FC;
-  font-size: 1.6rem;
+  position: relative;
+  background-color: #f3f5fc;
+  font-size: 0.1rem;
+  margin-bottom: 10rem;
+}
+* .button {
+  padding: 0.2rem 1.5rem;
+  border-radius: 0.9rem;
+  font-size: 1.1rem;
 }
 * .pd {
   padding: 0.5rem 5%;
@@ -17,23 +32,121 @@
 * .none {
   display: none;
 }
+* .check {
+  position: relative;
+  bottom: 15%;
+  width: 45px;
+}
+* .check::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  background-color: #333;
+  border-radius: 25px;
+}
+* .check::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background-color: white;
+  border-radius: 25px;
+  border: 2px solid #333;
+  box-sizing: border-box;
+  transition: 0.5s ease all;
+}
+* .check:checked::after {
+  transform: translateX(25px);
+  border: 2px solid rgb(70, 130, 255);
+}
+* .check:checked::before {
+  background: rgb(70, 130, 255);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.6rem;
+  }
+}
+:root {
+  --primary-color: white;
+}
+
+[data-theme=dark] {
+  --primary-color: black;
+}
 
 header {
+  font-size: 1rem;
   background-color: #19BDE6;
   color: #fff;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 }
 header img {
-  height: 1.5rem;
-  width: 4rem;
+  height: 1.9rem;
+  width: 1.5rem;
 }
-header span {
+header .logo {
+  display: flex;
+  gap: 0.5rem;
+}
+header .logo span {
+  display: none;
   font-size: 1.2rem;
   color: #0A3871;
 }
+header .accessibility {
+  display: flex;
+  gap: 4rem;
+}
+header .accessibility .darkmode {
+  display: flex;
+  gap: 0.5rem;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1%;
+  width: 340px;
+}
+header .accessibility .translate {
+  display: flex;
+  gap: 0.5rem;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 7%;
+  width: 200px;
+}
+header .accessibility .darkmode, header .accessibility .translate {
+  z-index: 20;
+}
+header .accessibility .darkmode span, header .accessibility .translate span {
+  color: #fff;
+}
+header .accessibility .bg {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0%;
+  width: 100vw;
+  height: 12vh;
+  background-color: #000;
+  z-index: 10;
+}
 
+@media screen and (min-width: 425px) {
+  header .logo span {
+    display: inline-block;
+  }
+}
 @media screen and (min-width: 1024px) {
   .encrypter {
     display: grid;
@@ -41,10 +154,21 @@ header span {
     gap: 0.5rem;
   }
 }
+:root {
+  --primary-color: white;
+}
+
+[data-theme=dark] {
+  --primary-color: black;
+}
+
 .card-input {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.5rem;
+}
+.card-input.another-class {
+  display: grid;
 }
 .card-input textarea {
   appearance: none;
@@ -55,13 +179,29 @@ header span {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
+  overflow: scroll;
   width: 100%;
 }
 .card-input textarea::placeholder {
   color: #0A3871;
   font-size: 2rem;
 }
-.card-input button {
+.card-input table {
+  border: none;
+}
+.card-input table tr {
+  border: 2px #000 solid;
+  border-radius: 0.5rem;
+}
+.card-input table tr th {
+  border-radius: 0.5rem;
+}
+.card-input .encrypter-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.card-input .encrypter-buttons button {
   border-radius: 0.5rem;
   padding: 0 2rem;
   margin: 0 auto;
@@ -72,12 +212,28 @@ header span {
   background-color: #fff;
 }
 
+@media screen and (min-width: 768px) {
+  .card-input .encrypter-buttons {
+    flex-direction: row;
+  }
+}
+:root {
+  --primary-color: white;
+}
+
+[data-theme=dark] {
+  --primary-color: black;
+}
+
 .card-output {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   background-color: #fff;
   border-radius: 0.5rem;
   text-align: center;
   padding: 0.4rem;
-  margin: 4rem 0;
+  margin: 4rem 0 15vh 0;
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.0784313725);
 }
 .card-output img {
@@ -85,9 +241,34 @@ header span {
 }
 
 @media screen and (min-width: 1024px) {
+  .card-output {
+    margin: 4rem 0 0;
+  }
   .card-output img {
     display: block;
   }
+}
+#popUpDictionary {
+  margin: auto;
+  padding: 2rem;
+  border-radius: 0.8rem;
+}
+#popUpDictionary .popUpText {
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+}
+#popUpDictionary .popUpText img {
+  height: 1.4rem;
+}
+#popUpDictionary #popUpContent ul {
+  list-style: none;
+}
+#popUpDictionary #popUpContent ul li {
+  display: flex;
+}
+#popUpDictionary #popUpContent ul li input {
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

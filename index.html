@@ -14,38 +14,109 @@
     <!-- LINKED FILES -->
 
     <link rel="stylesheet" href="sass/styles.css">
-    <!-- <script src="app.js" defer></script> -->
 
-
-    <title>Encriptador Alura Challenge</title>
+    <script src="dist/constants.js" type="module"></script>
+    <script src="dist/language.js" type="module"></script>
+    
+    <script src="dist/app.js" type="module" defer></script>
+    <script src="dist/translate.js" type="module" defer></script>
+    <script src="dist/popUp.js" type="module" defer></script>
+    <script src="dist/theme.js" type="module" defer></script>
+    
+    <title data-lang="title">Encriptador Alura Challenge</title>
 </head>
 <body>
     <main>
         <header class="pd">
-            <img src="src/Logo-1.png" alt="Alura logo">
-            <span>Challenge 01 Grupo 5</span>
+            <div class="logo">
+                <img src="src/Logo-1.png" alt="Alura logo">
+                <span data-lang="main-title">Challenge 01 Grupo 5</span>
+            </div>
+            <div class="accessibility">
+                <button class="button" data-lang="dict-btn" id="buttonDictionary">Diccionario</button>
+                
+                <div class="darkmode">
+                    <span class="translate_span" id="english" data-lang="dark-input">Dark Mode</span>
+                    <input type="checkbox" class="check" name="checking" id="DLChecking" placeholder="Check">
+                    <span class="translate_span" id="spanish" data-lang="light-input">Ligh Mode</span>
+                </div>
+                <div class="translate">
+                    <span class="translate_span" id="english" data-lang="en-input">Ingles</span>
+                    <input type="checkbox" class="check" name="checking" id="tslChecking" placeholder="Check">
+                    <span class="translate_span" id="spanish" data-lang="es-input">Español</span>
+                </div>
+                <div class="bg"></div>
+            </div>
         </header>
         <section class="encrypter pd">
             <div class="card-input">
-                <textarea placeholder="Ingrese texto aquí" name="input" id="inputText" cols="30" rows="10"></textarea>
+                <textarea 
+                    data-lang="input-textarea"
+                    placeholder="Ingrese texto aquí"
+                    name="input" id="inputText"
+                    rows="2"
+                ></textarea>
+                <p>Diccionario actual:</p>
+                <table border="1" id="dictionaryTable">
+                    <tr>
+                        <th>a</th>
+                        <th>ai</th>
+                    </tr>
+                    <tr>
+                        <th>e</th>
+                        <th>enter</th>
+                    </tr>
+                    <tr>
+                        <th>i</th>
+                        <th>imes</th>
+                    </tr>
+                    <tr>
+                        <th>o</th>
+                        <th>ober</th>
+                    </tr>
+                    <tr>
+                        <th>u</th>
+                        <th>ufat</th>
+                    </tr>
+                </table>
                 <div>
                     <img src="src/bi_exclamation-circle-fill.png " alt="exclamation-icon">
-                    <span>Solo letras minúsculas sin acentos</span>
+                    <span data-lang="info">Aqui SI puedes usar minúsculas/mayúsculas y tildes<span>
                 </div>
-                <button id="encrypt">Encriptar</button>
-                <button id="decrypt">Desencriptar</button>
+                <div class="encrypter-buttons">
+                    <button class="button" id="encrypt" data-lang="encrypt-btn">Encriptar</button>
+                    <button class="button" id="decrypt" data-lang="decrypt-btn">Desencriptar</button>
+                </div>
             </div>
             <div class="card-output">
-                <img class="none" src="src/Muñeco.png" alt="no found img">
-                <h3>Ningún mensaje fue encontrado</h3>
-                <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
-                <textarea name="output" id="outputText" cols="30" rows="10"class="none"></textarea>
-                <button class="none">Copiar</button>
+                <img class="none" id="munneco" src="src/Muñeco.png" alt="no found img">
+                <h3 data-lang="card-text-1" class="card-items">Ningún mensaje fue encontrado</h3>
+                <p data-lang="card-text-2" class="card-items">Ingresa el texto que deseas encriptar o desencriptar.</p>
+                <textarea
+                    data-lang="output-textarea"
+                    name="output"
+                    id="outputText"
+                    cols="30"
+                    rows="10"
+                    class="none"
+                ></textarea>
+                <button data-lang="copy-btn" class="none button" id="copy">Copiar</button>
             </div>
         </section>
     </main>
     <footer>
 
-    </footer>    
+    </footer>
+    <dialog id="popUpDictionary">
+        <div class="popUpText">
+            <img src="/src/icon-config.png" alt="config icon">
+            <p>Cambia el diccionario actual</p>
+        </div>
+        <div id="popUpContent"></div>
+        <div class="popUpButtons">
+            <button id="popUpSave">Guardar</button>
+            <button id="popUpClose">Cerrar</button>
+        </div>
+    </dialog>
 </body>
 </html>

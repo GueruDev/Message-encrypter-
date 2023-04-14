@@ -1,5 +1,5 @@
 $primary-color:#4D8E9E;
-$secondary-color:#19BDE6;
+
 $terteary-color: #75E3FF;
 $alura-color:#0A3871;
 
@@ -9,3 +9,15 @@ $white:#fff;
 $black:#000;
 
 $primary-font: 'Poppins', sans-serif;
+
+$primary-color-dark:#4D8E9E;
+
+:root {
+    --primary-color: white;
+    --secondary-color: #19BDE6;
+}
+
+[data-theme="dark"] {
+    --primary-color: black;
+    --secondary-color: #213135;
+}

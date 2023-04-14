@@ -1,17 +1,75 @@
 @import 'variables';
 header{
     img{
-        height: 1.5rem;
-        width: 4rem;
+        height: 1.9rem;
+        width: 1.5rem;
     }
+    font-size: 1rem;
     background-color: $secondary-color;
     color:$white ;
 
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    span{
-        font-size: 1.2rem;
-        color: $alura-color;
+    .logo{
+        display: flex;
+        gap: .5rem;
+        span{
+            display: none;
+            font-size: 1.2rem;
+            color: $alura-color;
+        }
+    }
+    .accessibility{
+        display: flex;
+        gap: 4rem;
+        .darkmode{
+
+            display: flex;
+            gap: .5rem;
+
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 1%;
+            width: 340px;
+
+        }
+        .translate{
+            display: flex;
+            gap: .5rem;
+
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 7%;
+            width: 200px;
+        }
+        .darkmode,.translate{
+            z-index: 20;
+            span{
+                color: $white;
+            }
+        }
+        .bg{
+            position:fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0%;
+            width: 100vw;
+            height: 12vh;
+            background-color: $black;
+            z-index: 10;
+        }
+    }
+}
+
+@media screen and (min-width:425px){
+    header{
+        .logo{
+            span{
+                display: inline-block;
+            }
+        }
     }
 }

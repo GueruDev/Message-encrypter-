@@ -1,5 +1,9 @@
 
-
+@media screen and (min-width:768px) {
+    .encrypter{
+        // margin-bottom: 20vh;
+    }
+}
 @media screen and (min-width:1024px){
     .encrypter{
         display: grid;

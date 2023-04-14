@@ -10,6 +10,8 @@ const popUpContent = <HTMLElement>document.getElementById("popUpContent")
 
 const popUpSave = <HTMLElement>document.getElementById("popUpSave")
 
+const popUpClose = <HTMLElement>document.getElementById("popUpClose")
+
 const table = <HTMLElement>document.getElementById("dictionaryTable")
 
 const populatePopUp = async () => {
@@ -47,3 +49,5 @@ const popUpUpdateDictionary = async () => {
 buttonPopUp.addEventListener("click", showPopUp, {passive: true})
 
 popUpSave.addEventListener("click", popUpUpdateDictionary, {passive: true})
+
+popUpClose.addEventListener("click", ()=>popUp.close(), {passive: true})

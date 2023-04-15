@@ -12,7 +12,7 @@
 
 
     <!-- LINKED FILES -->
-
+    <base href="/">
     <link rel="stylesheet" href="sass/styles.css">
 
     <script src="dist/constants.js" type="module"></script>
@@ -23,7 +23,7 @@
     <script src="dist/popUp.js" type="module" defer></script>
     <script src="dist/theme.js" type="module" defer></script>
     
-    <title data-lang="title">Encriptador Alura Challenge</title>
+    <title data-lang="title">Encriptador Alura</title>
 </head>
 <body>
     <main>
@@ -56,7 +56,7 @@
                     name="input" id="inputText"
                     rows="2"
                 ></textarea>
-                <p>Diccionario actual:</p>
+                <p data-lang="dict-head">Diccionario actual:</p>
                 <table border="1" id="dictionaryTable">
                     <tr>
                         <th>e</th>
@@ -81,7 +81,7 @@
                 </table>
                 <div>
                     <img src="src/bi_exclamation-circle-fill.png " alt="exclamation-icon">
-                    <span data-lang="info">Aqui SI puedes usar minúsculas/mayúsculas y tildes<span>
+                    <span data-lang="info">Aqui SI puedes usar minúsculas/mayúsculas y tildes</span>
                 </div>
                 <div class="encrypter-buttons">
                     <button class="button" id="encrypt" data-lang="encrypt-btn">Encriptar</button>

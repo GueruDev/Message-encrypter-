@@ -12,7 +12,6 @@
 
 
     <!-- LINKED FILES -->
-    <base href="/">
     <link rel="stylesheet" href="sass/styles.css">
 
     <script src="dist/constants.js" type="module"></script>
@@ -110,12 +109,12 @@
     <dialog id="popUpDictionary">
         <div class="popUpText">
             <img src="/src/icon-config.png" alt="config icon">
-            <p>Cambia el diccionario actual</p>
+            <p data-lang="popup-text">Cambia el diccionario actual</p>
         </div>
         <div id="popUpContent"></div>
         <div class="popUpButtons">
-            <button id="popUpSave">Guardar</button>
-            <button id="popUpClose">Cerrar</button>
+            <button data-lang="button-save" id="popUpSave">Guardar</button>
+            <button data-lang="button-close" id="popUpClose">Cerrar</button>
         </div>
     </dialog>
 </body>

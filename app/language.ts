@@ -27,7 +27,7 @@ export const words: Record<string, wordComponent> = {
     },
     'info': {
         'es': 'Aqui SI puedes usar minúsculas/mayúsculas y tildes',
-        'en': 'You are allow to use lowercase/uppercase and mark accents',
+        'en': 'Here you CAN use uppercase/lowercase and accents mark',
         'data': 'info',
         'type': 'inner'
     },
@@ -51,7 +51,7 @@ export const words: Record<string, wordComponent> = {
     },
     'cardText2': {
         'es': 'Ingresa el texto que deseas encriptar o desencriptar.',
-        'en': 'Insert text are want encrypt or decrypt.',
+        'en': 'Insert the text that you wish to encrypt or decrypt.',
         'data': 'card-text-2',
         'type': 'inner'
     },
@@ -93,8 +93,26 @@ export const words: Record<string, wordComponent> = {
     },
     'dict-head': {
         'es': 'Diccionario actual:',
-        'en': 'Actual dictionary:',
+        'en': 'Current dictionary:',
         'data': 'dict-head',
         'type': 'inner'
-    }
+    },
+    'popup-text':{
+        'es': 'Cambia el diccionario actual:',
+        'en': 'Change the current dictionary:',
+        'data': 'popup-text',
+        'type': 'inner'
+    },
+    'button-save':{
+        'es': 'Guardar',
+        'en': 'Save',
+        'data': 'button-save',
+        'type': 'inner'
+    },
+    'button-close':{
+        'es': 'Cerrar',
+        'en': 'Close',
+        'data': 'button-close',
+        'type': 'inner'
+    },
 }
